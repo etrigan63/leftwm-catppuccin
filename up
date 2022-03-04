@@ -69,7 +69,7 @@ leftwm-command "LoadTheme $SCRIPTPATH/theme.toml"
 
 # Set background
 if [ -x "$(command -v feh)" ]; then
-  feh --bg-fill --no-xinerama "$SCRIPTPATH"/small-memory.jpg
+  feh --bg-fill --no-xinerama "$SCRIPTPATH"/firewatch-dual4k.png
 fi
 
 #mainbar
