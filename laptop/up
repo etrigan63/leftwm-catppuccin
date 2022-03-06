@@ -34,8 +34,6 @@ volumeicon &
 #run caffeine &
 run tailscale-systray &
 run nordtray &
-run flameshot &
-run protonmail-bridge -no-window &
 #vivaldi-stable &
 #firefox &
 #thunar &
