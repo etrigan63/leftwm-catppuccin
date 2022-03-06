@@ -54,6 +54,10 @@ run hp-systray &
 
 systemctl --user restart xidlehook.service
 
+if test -f "$HOME/.cache/paleofetch"; then
+  rm "$HOME/.cache/paleofetch"
+fi  
+
 # Boot picom or compton if it exists
 if [ -x "$(command -v picom)" ]; then
   #picom --config $HOME/.config/leftwm/themes/current/picom.conf &> /dev/null &
