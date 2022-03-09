@@ -28,14 +28,14 @@ blueberry-tray &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 #/usr/lib/xfce4/notifyd/xfce4-notifyd &
 dunst &
-volumeicon &
+#volumeicon &
 #conky -c ~/.config/leftwm/system-overview &
 #nitrogen --restore &
 #run caffeine &
 run tailscale-systray &
 run nordtray &
 run flameshot &
-run protonmail-bridge -no-window &
+#run protonmail-bridge -no-window &
 #vivaldi-stable &
 #firefox &
 #thunar &
@@ -82,6 +82,6 @@ monitors=($(polybar -m | sed s/:.*//))
 leftwm-state -q -n -t "$SCRIPTPATH"/sizes.liquid | sed -r '/^\s*$/d' | while read -r width x y
 do
   barname="mainbar$index"
-  monitor=${monitors[index]} width=$(( width - 16 )) polybar -c "$SCRIPTPATH"/polybar.config $barname &> /dev/null &
+  monitor=${monitors[index]} width=$(( width - 16 )) polybar -c "$SCRIPTPATH"/polybar/config.ini $barname &> /dev/null &
   let index=index+1
 done
